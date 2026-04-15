@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Pricing - Choose Your Plan{% endblock %}
+
+{% block content %}
+<div class="max-w-6xl mx-auto">
+    <h1 class="text-4xl font-bold text-center mb-8">Simple Pricing</h1>
+    <p class="text-center text-gray-600 mb-12">Choose the plan that works for you</p>
+    
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- Free Plan -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold mb-2">Free</h2>
+            <p class="text-gray-600 mb-4">Perfect for getting started</p>
+            <p class="text-4xl font-bold mb-6">$0<span class="text-lg font-normal">/month</span></p>
+            <ul class="mb-8 space-y-2">
+                <li class="flex items-center">✓ Basic dashboard</li>
+                <li class="flex items-center">✓ 1 user account</li>
+                <li class="flex items-center text-gray-400">✗ Premium support</li>
+                <li class="flex items-center text-gray-400">✗ API access</li>
+            </ul>
+            <button disabled class="w-full bg-gray-400 text-white py-3 rounded-lg cursor-not-allowed">
+                Current Plan
+            </button>
+        </div>
+        
+        <!-- Premium Plan -->
+        <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-blue-500 relative">
+            <div class="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 rounded-tr-lg rounded-bl-lg text-sm">
+                POPULAR
+            </div>
+            <h2 class="text-2xl font-bold mb-2">Premium</h2>
+            <p class="text-gray-600 mb-4">Everything you need</p>
+            <p class="text-4xl font-bold mb-6">$49<span class="text-lg font-normal">/month</span></p>
+            <ul class="mb-8 space-y-2">
+                <li class="flex items-center">✓ Everything in Free</li>
+                <li class="flex items-center">✓ Unlimited users</li>
+                <li class="flex items-center">✓ Premium support</li>
+                <li class="flex items-center">✓ Full API access</li>
+            </ul>
+            <form method="post" action="{% url 'create_checkout_session' %}">
+                {% csrf_token %}
+                <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
+                    Upgrade to Premium
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

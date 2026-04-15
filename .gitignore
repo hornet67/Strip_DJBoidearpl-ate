@@ -1,0 +1,6 @@
+db.sqlite3
+venv/
+local_settings.py
+__pycache__/
+*.pyc
+*.pyo
