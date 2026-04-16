@@ -165,9 +165,21 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_SIGNUP_REDIRECT_URL = '/dashboard/'
 
 # Stripe Settings
-#STRIPE_PUBLISHABLE_KEY = local_settings.STRIPE_PUBLISHABLE_KEY
-#STRIPE_SECRET_KEY = local_settings.STRIPE_SECRET_KEY
+STRIPE_PUBLISHABLE_KEY = local_settings.STRIPE_PUBLISHABLE_KEY
+STRIPE_SECRET_KEY = local_settings.STRIPE_SECRET_KEY
 
 #webhook secret
-#STRIPE_WEBHOOK_SECRET = local_settings.STRIPE_WEBHOOK_SECRET
+STRIPE_WEBHOOK_SECRET = local_settings.STRIPE_WEBHOOK_SECRET
    
+   
+"""
+
+
+Cancel subscription page	Medium	2 hours
+Email notifications on payment	Medium	2 hours
+Subscription management portal	Medium	3 hours
+Admin dashboard with stats	Easy	1 hour
+Deployment to production	Medium	2 hours
+
+
+"""
